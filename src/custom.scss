@@ -1,0 +1,181 @@
+//override bootstrap variables here
+$primary: #232323;
+
+//banner styling  
+
+.textBanner{
+  position: absolute;
+  width: 100%;
+}
+
+svg {
+  display: block;
+  position: relative;
+  top: 17vh;
+  margin: auto;
+}
+
+text {
+  fill: white;
+  font-size: 40px;
+  letter-spacing: 10px; /* Adjust spacing between characters */
+}
+
+.banner {
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+
+  position: sticky;
+  top: 0;
+
+  z-index: -10000;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: sticky; 
+  top: 50%;
+  left: 50%;
+
+  transform: translate(0, -20%);
+
+  z-index: -99;
+  filter: blur(0px) contrast(1.2) saturate(1.2) drop-shadow(0 0 0.75rem rgb(255, 217, 0));;
+}
+
+.backshotME{
+  position: absolute;
+  top: 40vh;
+  left: 50vw;
+  z-index: -80;
+
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  will-change: transform;
+  
+  transform: translate(0, -20%);
+  filter: blur(0px) contrast(1.2) saturate(1.2);
+}
+
+//content styling
+
+.textContent {
+  width: 100%;
+  margin: auto;
+  padding-top: 100px;
+  padding-left: 16.5vw;
+  padding-right: 16.5vw;
+  padding-bottom: 50px;
+  background-color: white;
+}
+
+nav{
+  position: sticky;
+}
+
+.mainNav{
+  background-color: white;
+}
+
+.mainSection{
+  height: auto;
+  padding-top: 5px;
+
+  -webkit-box-shadow: 0px -100px 62px 25px rgba(0,0,0,0.8);
+  -moz-box-shadow: 0px -100px 62px 25px rgba(0,0,0,0.8);
+  box-shadow: 0px -100px 62px 25px rgba(0,0,0,0.8); 
+}
+
+#intro h1{
+  margin-bottom: 50px;
+}
+
+.bgImageContainer {
+  position: relative;
+  height: 350px;
+  overflow: hidden; /* Ensure the image stays within the container */
+  width: 100%;
+  z-index: -50;
+}
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  width: 200%;
+  height: 1000px;
+  object-fit: cover; /* Maintain aspect ratio */
+  will-change: transform; /* Optimize for animations */
+  transform: translateX(-50%); /* Center the image */
+}
+
+
+
+.topShadow{
+  -webkit-box-shadow: 0px 100px 62px 25px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px 100px 62px 25px rgba(0,0,0,0.3);
+  box-shadow: 0px 100px 62px 25px rgba(0,0,0,0.3);
+}
+
+.bottomShadow{
+  -webkit-box-shadow: 0px -10px 62px 25px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0px -10px 62px 25px rgba(0,0,0,0.3);
+  box-shadow: 0px -10px 62px 25px rgba(0,0,0,0.3);
+}
+
+.main{
+  height: 3000px;
+}
+
+//Navbar styling
+
+
+/* mobile styles */
+@media only screen and (max-width: 767px) { 
+  .textBanner{
+    height: 100vh;
+  }
+  
+  .banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: sticky; 
+    top: 50%;
+    left: 50%;
+  
+    transform: translate(0, -10%);
+  
+    z-index: -10000;
+    filter: blur(0px) contrast(1.2) saturate(1.2) drop-shadow(0 0 0.75rem rgb(255, 217, 0));;
+  }
+
+  svg{
+    width: 100%;
+    height: 100vh;
+    top: 0;
+  }
+
+  .textContent{
+    width: 100vw;
+    margin: auto;
+    margin-top: 100px;
+  }
+
+  .textContent{
+    text-align: center;
+  }
+}
+
+/* desktop styles */
+@media only screen and (min-width: 768px) { 
+  
+}
+
+@import '~bootstrap/scss/bootstrap.scss'
