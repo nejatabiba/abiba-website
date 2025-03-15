@@ -12,9 +12,12 @@ function App() {
 
   return (
     <div className="App">
-        <Header/> 
+      <Header/> 
+      <Parallax pages={3}>
         <Banner />
         <Main />
+      </Parallax>
+        
     </div>
   );
 }

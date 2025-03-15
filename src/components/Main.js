@@ -7,9 +7,12 @@ export function Main() {
     const ref = useRef(null)
 
     return(
-        <div className="main">
-            
-        </div>
+        <ParallaxLayer offset={0.9999} speed={2} style={{zIndex: 100}}>
+            <div className="main bottomShadow">
+                This is a text content div
+            </div>
+        </ParallaxLayer>
+        
     )
 
 }
