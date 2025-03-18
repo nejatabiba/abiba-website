@@ -10,7 +10,7 @@ export function Banner() {
 
   return (
     <div>
-      <ParallaxLayer offset={0} speed={1}>
+      <ParallaxLayer offset={0} speed={0.3}>
         <section className="banner">
                 <img
                   src={backshot}  
@@ -19,7 +19,7 @@ export function Banner() {
                 />
         </section>
       </ParallaxLayer>
-      <ParallaxLayer offset={0} speed={0.3}>
+      <ParallaxLayer offset={0} speed={0.2}>
           <section className="textBanner">
                   {<svg width="600" height="600" viewBox="0 0 300 300">
                     <defs>
