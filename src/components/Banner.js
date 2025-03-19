@@ -9,7 +9,7 @@ import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 export function Banner() {
 
   return (
-    <div>
+    <div  id="top" >
       <ParallaxLayer offset={0} speed={0.3}>
         <section className="banner">
                 <img

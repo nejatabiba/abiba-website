@@ -1,2 +1,8 @@
 ### IT Fundamentals 
-##### Technical Certificate
+###### Technical Certificate
+
+Learn modern programming techniques, languages, and software development methodologies.
+
+Gain knowledge of operating systems (Windows, Linux, Mac), application software, and computer hardware.
+
+Understand hardware, OS software, and protocols driving modern networks.

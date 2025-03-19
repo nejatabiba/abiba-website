@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Card } from './Card';
-import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
+
 
 export function CardRotator({ cards }) {
     const [previousCard, setPreviousCard] = useState(0);
@@ -44,17 +44,21 @@ export function CardRotator({ cards }) {
 
     return (
         <div className="cardRotator">
-            <SlArrowLeft 
-                className={`cardArrow ${preloadedCards.length === 0 ? 'disabled' : ''}`} 
-                onClick={preloadedCards.length > 0 ? decrementCard : null} 
-            />
-            {preloadedCards.length > 0 && (
-                <Card image={preloadedCards[currentCard].image} content={preloadedCards[currentCard].content} />
-            )}
-            <SlArrowRight 
-                className={`cardArrow ${preloadedCards.length === 0 ? 'disabled' : ''}`} 
-                onClick={preloadedCards.length > 0 ? advanceCard : null} 
-            />
+            {preloadedCards.map((card, index) => {
+                return <Card  
+                    image = {card.image}
+                    content={card.content}
+                    advanceCard = {advanceCard}
+                    decrementCard = {decrementCard}
+                    key={index}
+                    index={index}
+                    currentCard = {currentCard}
+                    nextCard = {nextCard}
+                    previousCard = {previousCard}
+                    />
+            })}
+            
+            
         </div>
     );
 }

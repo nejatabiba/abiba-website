@@ -25,6 +25,10 @@ text {
   letter-spacing: 10px; /* Adjust spacing between characters */
 }
 
+.logo{
+  height: 7vh;
+}
+
 .banner {
   
 }
@@ -68,6 +72,8 @@ text {
 //content styling
 
 .textContent {
+  position: relative;
+
   width: 100%;
   margin: auto;
   padding-top: 100px;
@@ -124,15 +130,19 @@ nav{
 }
 
 .topShadow{
-  -webkit-box-shadow: 0px 100px 62px 25px rgba(0,0,0,0.3);
-  -moz-box-shadow: 0px 100px 62px 25px rgba(0,0,0,0.3);
-  box-shadow: 0px 100px 62px 25px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0px 100px 62px 25px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 100px 62px 25px rgba(0,0,0,0.1);
+  box-shadow: 0px 100px 62px 25px rgba(0,0,0,0.1);
+
+  z-index: 1;
 }
 
 .bottomShadow{
   -webkit-box-shadow: 0px -10px 62px 25px rgba(0,0,0,0.3);
   -moz-box-shadow: 0px -10px 62px 25px rgba(0,0,0,0.3);
   box-shadow: 0px -10px 62px 25px rgba(0,0,0,0.3);
+
+  z-index: 1;
 }
 
 .main{
@@ -168,13 +178,16 @@ nav{
   width: 40px; /* Increase the size of the SVG */
   height: 40px; /* Increase the size of the SVG */
   padding: 10px; /* Add padding around the SVG */
-  border: 1px solid #232323; /* Add a border */
+  border: 1px solid #dadadada; /* Add a border */
   border-radius: 50%; /* Make it circular */
   display: flex; /* Center the SVG inside the container */
   align-items: center; /* Center vertically */
   justify-content: center; /* Center horizontally */
   cursor: pointer; /* Add a pointer cursor for interactivity */
   transition: transform 0.2s ease; /* Add a hover effect */
+  background-color: #232323;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 
   -webkit-box-shadow: 0px 2px 6px -2px #393939;
   -moz-box-shadow: 0px 2px 6px -2px #393939;
@@ -195,32 +208,111 @@ nav{
 }
 
 .cardOverview{
+  position: fixed;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-top: 50px;
   padding-bottom: 50px;
 
-  width: 70%;
+  width: 100%;
 }
 
-.cardOverview .cardText{
-  margin: 10px;
+.noneCard{
+  display: none;
+}
+
+.currentCard{
+  transform: translateX(0);
+  transition: transform 0.5s;
+}
+
+.nextCard{
+  transform: translateX(100%);
+  transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.previousCard{
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+}
+
+.cardHovering p{
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.cardNotHovering p{
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 
 .cardImage{
-  border-radius: 12px;
-  border: #232323 solid 1px;
-  width: 45vw;
-  aspect-ratio: 16/9;
-  object-fit:fill;
+  width: 100%;
+  height: 75vh;
+
+  aspect-ratio: 100vw/100vh;
+  object-fit: cover;
 }
 
 .cardText{
-  width: 24vw;
+  position: fixed;
+  width: 100%;
+
+  color: white;  
+}
+
+.cardText.cardHovering{
+  background-color: #23232395;
+  transition: background-color 0.5s;
+}
+.cardText.cardNotHovering{
+  background-color: transparent;
+  transition: background-color 0.5s;
+}
+
+.cardNotHovering> :not(p){
+  opacity: 1;
+  background-color: #23232395;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 0;
+}
+
+.cardHovering> :not(p){
+  opacity: 1;
+  background-color: #23232395;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 0;
+}
+
+.cardArrow{
+  position: fixed;
+  top: 50%;
+
+  color: #dadada;
+  z-index: 100;
+}
+
+.cardArrowLeft{
+  left: 10px;
+}
+.cardArrowRight{
+  right: 10px;
 }
 //Navbar styling
 
+.opaque-header{
+  background-color: rgba(0, 0, 0, 0.500);
+
+  transition: background-color 0.5s;
+}
+
+.header-transparent{
+  background-color: transparent;
+
+  transition: background-color 0.5s;
+}
 
 /* mobile styles */
 @media only screen and (max-width: 767px) { 

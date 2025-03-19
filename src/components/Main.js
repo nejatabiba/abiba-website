@@ -120,8 +120,8 @@ export function Main() {
                 
             </ParallaxLayer>
             <ParallaxLayer offset={2.2} speed={0} style={{zIndex:2}}>
-                <div className="main bottomShadow topShadow" style={{}}>
-                    <TextContent header={"Welcome!"} content={body} id={"body"}></TextContent>
+                <div className="main bottomShadow topShadow" id="education" style={{}}>
+                    <TextContent className={"topShadow"} header={""} content={body} id={"body"}></TextContent>
                     <CardRotator cards={educationCards}></CardRotator>
                 </div>
                 

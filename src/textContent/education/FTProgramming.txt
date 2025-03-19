@@ -1,2 +1,10 @@
 ##### Fast Track Programming
 ###### Technical Certificate
+
+Explain IS methodology and SDLC phases.
+
+Develop systems documentation (plans, models, charts, UI designs).
+
+Apply database design and SQL to solve business/IT problems.
+
+Design and implement software solutions from problem definitions.

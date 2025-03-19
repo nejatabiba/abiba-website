@@ -1,3 +1,7 @@
+export const logo1 = require("./logo1.png");
+export const logo1White = require("./logo1WHITE.png");
+
+//bg Images
 export const hike_bg = require("./hike_bg.jpg");
 export const ist = require("./banner/ist.jpg");
 export const man = require("./banner/man.jpg");
